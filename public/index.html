@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Criação de Snapshots - Cloud - EmpresaX</title>
+</head>
+
+<body>
+    <img id="company-logo" src="./img/logoipsum-330.svg" alt="company-logo">
+    <h1>Criação de Snapshots - Cloud</h1>
+    <div class="container" id="container-form">
+        <form id="form">
+            <div class="container" id="container-customer">
+                <select name="customer" id="customer">
+                    <option value="" disabled selected>Selecione o cliente</option>
+                    <option value="empresa1">Empresa1</option>
+                    <option value="empresa2">Empresa2</option>
+                    <option value="empresa3">Empresa3</option>
+                    <option value="empresa4">Empresa4</option>
+                    <option value="empresa5">Empresa5</option>
+                    <option value="empresa6">Empresa6</option>
+                    <option value="empresa7">Empresa7</option>
+                    <option value="empresa8">Empresa8</option>
+                </select>
+            </div>
+            <div class="container" id="container-cloud">
+                <select name="cloud" id="cloud">
+                    <option value="" disabled selected>Selecione a cloud</option>
+                    <option value="azure">Azure</option>
+                    <option value="aws">AWS</option>
+                    <option value="oci">OCI</option>
+                </select>
+            </div>
+            <div class="container" id="container-region">
+                <select name="aws-region" id="aws-region">
+                    <option value="" disabled selected>Selecione a região</option>
+                    <option value="us-east-1">US East 1 (N. Virginia)</option>
+                    <option value="sa-east-1">South America (São Paulo)</option>
+                </select>
+                <select name="oci-region" id="oci-region">
+                    <option value="" disabled selected>Selecione a região</option>
+                    <option value="sa-saopaulo-1">Brazil East (São Paulo)</option>
+                    <option value="sa-vinhedo-1">Brazil Southeast (Vinhedo)</option>
+                </select>
+            </div>
+            <div class="container" id="container-machine">
+                <input type="text" id="machine" name="machine"
+                    placeholder="Máquina(s) separado por vírgula / ex: vm1,vm2">
+            </div>
+            <h2>Tipo de disco</h2>
+            <div class="container" id="container-disk">
+                <div class="radio-inputs" id="radio-inputs">
+                    <label class="radio" for="disk-os">
+                        <input type="radio" name="radio" checked="" value="disk-os" id="disk-os">
+                        <span class="name">OS</span>
+                    </label>
+                    <label class="radio" for="disk-data">
+                        <input type="radio" name="radio" checked="" value="disk-data" id="disk-data">
+                        <span class="name">Dados</span>
+                    </label>
+                    <label class="radio" for="disk-both">
+                        <input type="radio" name="radio" checked="" value="disk-both" id="disk-both">
+                        <span class="name">Ambos</span>
+                    </label>
+                </div>
+            </div>
+            <div class="container" id="container-email">
+                <input type="email" id="email" name="email"
+                    placeholder="E-mail para envio dos logs">
+            </div>
+            <div class="container" id="container-button-send">
+                <button id="button-send" type="submit">
+                    <p>Enviar</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" stroke-width="4">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                    </svg>
+                </button>
+            </div>
+        </form>
+        <div class="container" id="container-return">
+            <h3 id="return-message-success"></h3>
+        </div>
+        <div class="container" id="container-validation">
+            <h3 id="message-validation"></h3>
+        </div>
+        <div class="container" id="container-button-refresh">
+            <button onclick="window.location.href=window.location.href" id="button-refresh">Voltar</button>
+        </div>
+        <h2 id="version">v1.0.3</h2>
+    </div>
+    <div class="container" id="container-footer">
+        <a id="link-repositorio"
+            href="temp"
+            target="_blank">REPOSITÓRIO</a>
+        <a id="link-changelog"
+            href="temp"
+            target="_blank">CHANGELOG</a>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

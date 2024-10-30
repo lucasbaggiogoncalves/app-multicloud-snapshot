@@ -1,0 +1,22 @@
+######################################## User
+
+Name: EmpresaX-SnapshotApp
+
+E-mail não é necessário, para desabilitar temporariamente: https://docs.public.oneportal.content.oci.oraclecloud.com/en-us/iaas/Content/Identity/defaultsettings/set-primary-email-user.htm
+
+######################################## Group
+
+Name: EmpresaX-SnapshotApp
+
+######################################## Policy
+
+Nome : EmpresaX-SnapshotApp
+Descrição: Permissao para aplicacao de geracao de snapshots da EmpresaX
+
+Permissões:
+
+Allow group 'Default'/'EmpresaX-SnapshotApp' to read compartments in tenancy
+Allow group 'Default'/'EmpresaX-SnapshotApp' to manage volume-family in tenancy
+Allow group 'Default'/'EmpresaX-SnapshotApp' to use instance-family in tenancy
+Allow group 'Default'/'EmpresaX-SnapshotApp' to use volume-backups in tenancy where request.permission='VOLUME_BACKUP_COPY'
+Allow group 'Default'/'EmpresaX-SnapshotApp' to use boot-volume-backups in tenancy where request.permission='BOOT_VOLUME_BACKUP_COPY'

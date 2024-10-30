@@ -1,0 +1,224 @@
+/* Body */
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 150px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: hsl(225, 21%, 15%);
+}
+
+/* Text */
+
+h1 {
+    text-align: center;
+    font-size: 25px;
+    color: #EEE;
+}
+
+h2 {
+    text-align: center;
+    font-size: 16px;
+    color: #EEE;
+}
+
+h2#version {
+    font-size: 12px;
+    text-align: right;
+}
+
+h3 {
+    text-align: center;
+    font-size: 14px;
+    color: #EEE;
+}
+
+a {
+    color: #EEE;
+    text-align: left;
+    font-size: 12px;
+}
+
+a:hover {
+    color: red;
+}
+
+/* Images */
+
+#service-logo {
+    width: 220px;
+    margin-bottom: 20px;
+}
+
+/* Containers */
+
+.container {
+    margin: 20px;
+    gap: 10px;
+    padding: 0 10px;
+}
+
+#container-form {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(226, 22%, 25%);
+    border-radius: 10px;
+    margin-bottom: 0;
+}
+
+#container-machine,
+#container-disk,
+#container-button-send,
+#container-button-refresh,
+#container-email {
+    display: flex;
+    justify-content: center;
+}
+
+#container-validation {
+    margin: 0;
+}
+
+#container-footer {
+    margin-left: 15px;
+    margin-top: 5px;
+    width: 500px;
+}
+
+/* Boxes */
+
+select, #machine, #email {
+    outline: none;
+    padding: 10px;
+    width: 100%;
+    font-size: 14px;
+    border-radius: 0.5rem;
+    background-color: #EEE;
+}
+
+select:focus, #machine:focus, #email:focus {
+    border-color: #b51215;
+}
+
+/* Buttons */
+
+/* Button Radio */
+
+.radio-inputs {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 0.5rem;
+    background-color: #EEE;
+    box-sizing: border-box;
+    box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.06);
+    padding: 0.25rem;
+    width: 500px;
+    font-size: 14px;
+}
+
+.radio-inputs .radio {
+    flex: 1 1 auto;
+    text-align: center;
+}
+
+.radio-inputs .radio input {
+    display: none;
+}
+
+.radio-inputs .radio .name {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+    border: none;
+    padding: .5rem 0;
+    color: rgba(51, 65, 85, 1);
+    transition: all .15s ease-in-out;
+}
+
+.radio-inputs .radio input:checked+.name {
+    background-color: #b51215;
+    font-weight: 600;
+    color: white;
+}
+
+/* Button Refresh */
+
+#button-refresh {
+    color: white;
+    text-align: center;
+}
+
+/* Button Submit */
+
+button {
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+button {
+    --primary-color: white;
+    --hovered-color: #b51215;
+    position: relative;
+    display: flex;
+    font-weight: 600;
+    font-size: 18px;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+button p {
+    margin: 0;
+    position: relative;
+    font-size: 18px;
+    color: var(--primary-color);
+}
+
+button::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    left: 0;
+    bottom: -7px;
+    background: var(--hovered-color);
+    height: 2px;
+    transition: 0.3s ease-out;
+}
+
+button p::before {
+    position: absolute;
+    width: 0%;
+    inset: 0;
+    color: var(--hovered-color);
+    overflow: hidden;
+    transition: 0.3s ease-out;
+}
+
+button:hover::after {
+    width: 100%;
+}
+
+button:hover p::before {
+    width: 100%;
+}
+
+button:hover svg {
+    transform: translateX(4px);
+    color: var(--hovered-color);
+}
+
+button svg {
+    color: var(--primary-color);
+    transition: 0.2s;
+    position: relative;
+    width: 15px;
+    transition-delay: 0.2s;
+}
